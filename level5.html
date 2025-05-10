@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Рівень 5: Вимкни червону кнопку</title>
+  <link rel="stylesheet" href="level5.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>Термінова ситуація!</h1>
+    <p>Вимкни червону кнопку, щоб уникнути вибуху!</p>
+
+    <div class="button-grid">
+      <button class="game-button" onclick="pressButton(this)">🟢</button>
+      <button class="game-button" onclick="pressButton(this)">🔵</button>
+      <button class="game-button correct" onclick="winGame(this)">🔴</button>
+      <button class="game-button" onclick="pressButton(this)">🟡</button>
+      <button class="game-button" onclick="pressButton(this)">🟣</button>
+    </div>
+
+    <div id="result-message"></div>
+
+    <button id="retry-btn" onclick="restartGame()">Грати ще раз</button>
+    <button id="menu-btn" onclick="goToMenu()">Повернутися в галактику</button>
+  </div>
+
+  <script src="level5.js"></script>
+</body>
+</html>

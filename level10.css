@@ -1,0 +1,76 @@
+/* level10.css */
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(ellipse at center, #000 0%, #111 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #00eaff;
+}
+
+#eye-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.eye {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at center, #fff 30%, #00eaff 60%, #003344 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00eaff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.eye.correct {
+  box-shadow: 0 0 20px #00ff00;
+  border: 2px solid #00ff00;
+}
+
+.eye.incorrect {
+  box-shadow: 0 0 20px #ff0000;
+  border: 2px solid #ff0000;
+}
+
+#message {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  min-height: 2em;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  background: #00eaff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #00b0cc;
+}
+
+#menu-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #0077aa;
+}

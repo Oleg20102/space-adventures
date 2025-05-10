@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    background: radial-gradient(ellipse at center, #0b0b33 0%, #000000 100%);
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+  }
+
+  .galaxy {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .orbit {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 1px dashed rgba(255,255,255,0.1);
+    border-radius: 50%;
+    animation: spin 60s linear infinite;
+  }
+
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }
+
+  .planet {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #3399ff, #003366);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 0 0 10px #3399ff;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .planet:hover {
+    transform: scale(1.1);
+  }
+
+  /* Позиції 10 рівнів по колу */
+  .planet:nth-child(1) { top: -2%; left: 50%; transform: translate(-50%, -50%); }
+  .planet:nth-child(2) { top: 18%; left: 82%; transform: translate(-50%, -50%); }
+  .planet:nth-child(3) { top: 50%; left: 100%; transform: translate(-50%, -50%); }
+  .planet:nth-child(4) { top: 82%; left: 82%; transform: translate(-50%, -50%); }
+  .planet:nth-child(5) { top: 100%; left: 50%; transform: translate(-50%, -50%); }
+  .planet:nth-child(6) { top: 82%; left: 18%; transform: translate(-50%, -50%); }
+  .planet:nth-child(7) { top: 50%; left: 0%; transform: translate(-50%, -50%); }
+  .planet:nth-child(8) { top: 18%; left: 18%; transform: translate(-50%, -50%); }
+  .planet:nth-child(9) { top: 30%; left: 50%; transform: translate(-50%, -50%); }
+  .planet:nth-child(10) { top: 50%; left: 50%; background: gold; box-shadow: 0 0 15px gold; }
+
+  .back-button {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    padding: 12px 20px;
+    font-size: 1em;
+    color: white;
+    background: linear-gradient(to right, #3333cc, #000099);
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 0 15px #3333cc;
+    transition: background 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .back-button:hover {
+    background: linear-gradient(to right, #5555ff, #2222aa);
+  }
+  
+  .planet:nth-child(1) {
+    top: -2%; left: 50%; transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #999, #666); /* Місяць */
+  }
+  
+  .planet:nth-child(2) {
+    top: 18%; left: 82%; transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #ff3300, #990000); /* Марс */
+  }
+  
+  .planet:nth-child(3) {
+    top: 50%; left: 100%; transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #33ccff, #006699); /* Земля */
+  }
+  
+  .planet:nth-child(4) {
+    top: 82%; left: 82%; transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #ffff99, #ffcc00); /* Венера */
+  }
+  
+  .planet:nth-child(5) {
+    top: 100%; left: 50%; transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #003366, #000022); /* Нептун */
+  }
+  
+  .planet:nth-child(6) {
+    top: 82%; left: 18%; transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #66ffff, #3399cc); /* Уран */
+  }
+  
+  .planet:nth-child(7) {
+    top: 50%; left: 0%; transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #cc9900, #996600); /* Сатурн */
+    box-shadow: 0 0 10px #cc9900;
+  }
+  
+  .planet:nth-child(8) {
+    top: 18%; left: 18%; transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #aaaaaa, #555555); /* Меркурій */
+  }
+  
+  .planet:nth-child(9) {
+    top: 30%; left: 50%; transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #cc66ff, #660099); /* Фантазійна */
+  }
+  
+  .planet:nth-child(10) {
+    top: 50%; left: 50%;
+    background: radial-gradient(circle, gold, orange);
+    box-shadow: 0 0 20px gold;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 20px gold; }
+    50% { box-shadow: 0 0 40px orange; }
+  }
+  /* Сонце */
+.sun {
+  position: absolute;
+  top: 20%;
+  left: -100px; /* трохи збоку */
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #ffdd33, #ff9900);
+  border-radius: 50%;
+  box-shadow: 0 0 60px 30px rgba(255, 204, 0, 0.6);
+  animation: pulse 2s infinite ease-in-out;
+  z-index: 0;
+}
+
+/* Анімація сяйва */
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 60px 30px rgba(255, 204, 0, 0.6); }
+  50% { box-shadow: 0 0 80px 40px rgba(255, 204, 0, 0.8); }
+}
+
+/* Зірки на фоні */
+.stars-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  opacity: 0.8;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+.planet[data-level="1"] {
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.planet[data-level="2"] {
+  top: 30%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}

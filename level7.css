@@ -1,0 +1,71 @@
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .memory-btn {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+    display: inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  
+  .memory-btn.active {
+    opacity: 1;
+    box-shadow: 0 0 20px white;
+  }
+  
+  #btn1 { background: red; }
+  #btn2 { background: green; }
+  #btn3 { background: blue; }
+  #btn4 { background: yellow; }
+  
+  #start-btn, #retry-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    border: none;
+    background: #444;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  #start-btn:hover, #retry-btn:hover {
+    background: #666;
+  }
+  
+  #status {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  #menu-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #380dd4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 1000;
+  }
+  
+  #menu-btn:hover {
+    background-color: #111bd0;
+  }
+  

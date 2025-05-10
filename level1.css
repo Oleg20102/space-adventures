@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at center, #050518 0%, #000 100%);
+    color: #fff;
+    text-align: center;
+    padding-top: 60px;
+  }
+  
+  .sphere-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+  }
+  
+  .sphere {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #00ffff, #005577);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #00ffff;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .sphere:hover {
+    transform: scale(1.1);
+  }
+  
+  .sphere.correct {
+    box-shadow: 0 0 30px #00ff66;
+  }
+  
+  .sphere.error {
+    box-shadow: 0 0 30px red;
+  }
+  
+  #result {
+    margin-top: 40px;
+    font-size: 1.4em;
+  }
+  
+  .back-btn {
+    display: inline-block;
+    margin-top: 60px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #280cdd;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #ffffff;
+  }
+  

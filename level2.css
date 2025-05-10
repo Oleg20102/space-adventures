@@ -1,0 +1,44 @@
+body {
+    background: radial-gradient(#000020, #000000);
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    padding: 40px;
+  }
+  
+  .planet-zone {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+  }
+  
+  .planet {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 15px white;
+  }
+  
+  #result {
+    margin-top: 30px;
+    font-size: 1.4em;
+  }
+  
+  .back-button {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    padding: 10px 20px;
+    background-color: #3333cc;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+  }
+  

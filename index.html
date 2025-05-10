@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Космічне Фентезі</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/Script.js">
+  <style>
+  
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+  <div class="container">
+    <h1>Галактичне Фентезі</h1>
+    <p>Ласкаво просимо у світ, де магія перетинає зоряні стежки. Відкрий для себе всесвіт, наповнений чарами, расами з інших планет і міжгалактичними легендами.</p>
+    <button class="btn-explore" onclick="window.location.href='index2.html'">Вирушити в дослідження</button>
+
+  </div>
+  <script>
+    // Додаємо зірки
+    const stars = document.getElementById('stars');
+    for (let i = 0; i < 150; i++) {
+      let star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = Math.random() * 100 + '%';
+      star.style.left = Math.random() * 100 + '%';
+      stars.appendChild(star);
+    }
+
+    // Падаюча зірка інколи
+    function createShootingStar() {
+      const star = document.createElement('div');
+      star.classList.add('shooting-star');
+      star.style.top = Math.random() * window.innerHeight / 2 + 'px';
+      star.style.left = Math.random() * window.innerWidth / 2 + 'px';
+      document.body.appendChild(star);
+      setTimeout(() => star.remove(), 3000);
+    }
+
+    setInterval(() => {
+      if (Math.random() < 0.3) createShootingStar();
+    }, 3000);
+  </script>
+</body>
+</html>

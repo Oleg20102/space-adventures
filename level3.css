@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #000010, #000000);
+  color: white;
+  overflow: hidden;
+}
+
+.asteroid-field {
+  text-align: center;
+  padding-top: 30px;
+}
+
+h1 {
+  color: #ff5555;
+  font-size: 2.5em;
+}
+
+#game-area {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+#player {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 50px; /* Ширина космічного корабля */
+  height: 50px; /* Висота космічного корабля */
+  background-image: url('korabel.png'); /* Тут заміни на свою картинку космічного корабля */
+  background-size: cover;
+  transform: translateX(-50%);
+}
+
+.asteroid {
+  position: absolute;
+  width: 40px; /* Розмір метеорита */
+  height: 40px; /* Розмір метеорита */
+  background-image: url('meteor.png'); /* Замінити на свою картинку метеорита */
+  background-size: cover;
+  box-shadow: 0 0 10px #aaa;
+}
+
+.back-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 16px;
+  background: #3333cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #4444ff;
+}
+
+#win-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  z-index: 1000;
+  display: none;
+}
+
+#win-screen h1 {
+  margin-bottom: 20px;
+}
+
+#win-screen button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 10px;
+  background: #00cc99;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#win-screen button:hover {
+  background: #009977;
+}
+
+#lose-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  z-index: 1000;
+  display: none;
+}
+
+#lose-screen button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 1em;
+  border: none;
+  border-radius: 10px;
+  background: #cc3333;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#lose-screen button:hover {
+  background: #aa2222;
+}
+
+#timer {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ffcc;
+  margin-top: 10px;
+}

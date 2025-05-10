@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Рівень 3 — Астероїдне поле</title>
+  <link rel="stylesheet" href="level3.css">
+</head>
+<body>
+
+  <div class="asteroid-field">
+    <h1>⚠️ Астероїдне поле</h1>
+    <p>Пройди через хаос астероїдів і виживи!</p>
+    <div id="timer">30</div>
+
+    <div id="player"></div>
+    <div id="game-area"></div>
+
+    <a href="index2.html" class="back-button">← Назад до вибору рівня</a>
+  </div>
+
+  <!-- Екран перемоги -->
+  <div id="win-screen" style="display: none;">
+    <h1>🎉 Ви пройшли рівень!</h1>
+    <p>Час виживання: 30 секунд</p>
+    <button onclick="goToMenu()">Назад у меню</button>
+  </div>
+
+  <!-- Екран поразки -->
+  <div id="lose-screen" style="display: none;">
+    <h1>💥 Ви програли!</h1>
+    <button onclick="restartGame()">Спробувати знову</button>
+  </div>
+
+  <script src="level3.js"></script>
+</body>
+</html>

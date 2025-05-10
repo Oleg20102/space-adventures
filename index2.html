@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Галактика</title>
+  <link rel="stylesheet" href="style2.css">
+  <style>
+ 
+  </style>
+</head>
+<body>
+
+  <div class="sun"></div>
+  <div class="stars-bg" id="stars-bg"></div>
+  
+  <div class="galaxy">
+    <div class="orbit">
+      <a href="level1.html">  
+      <div class="planet" onclick="goToLevel(1)">1</div>
+      </a>
+     <div class="planet" onclick="goToLevel(2)">2</div>
+      <div class="planet" onclick="goToLevel(3)">3</div>
+      <div class="planet" onclick="goToLevel(4)">4</div>
+      <div class="planet" onclick="goToLevel(5)">5</div>
+      <div class="planet" onclick="goToLevel(6)">6</div>
+      <div class="planet" onclick="goToLevel(7)">7</div>
+      <div class="planet" onclick="goToLevel(8)">8</div>
+      <div class="planet" onclick="goToLevel(9)">9</div>
+      <div class="planet" onclick="goToLevel(10)">10</div>   
+    </div>
+  </div>
+
+  <a href="index.html" class="back-button">← Назад у головне меню</a>
+
+
+  <script>
+    function goToLevel(level) {
+      alert("Переходимо до рівня " + level);
+      // Наприклад: window.location.href = level${level}.html;
+    }
+    
+
+  </script>
+  <script src="Script2.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блокування системи</title>
+    <link rel="stylesheet" href="level8.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Блокування системи</h1>
+        <p>Введіть правильний код, щоб розблокувати систему.</p>
+
+        <div id="lock-panel">
+            <input type="text" id="code-input" maxlength="4" placeholder="Введіть код" />
+            <button id="submit-btn">Підтвердити</button>
+        </div>
+
+        <p id="message"></p>
+        
+        <div id="buttons-container">
+            <button id="retry-btn" style="display:none;">Грати ще раз</button>
+            <button id="menu-btn">Повернутися в меню</button>
+        </div>
+
+        <!-- Підказки з цифрами -->
+        <div id="hints-container">
+            <span class="hint" style="top: 10px; left: 10px;">1</span>
+            <span class="hint" style="top: 10px; right: 10px;">0</span>
+            <span class="hint" style="bottom: 10px; left: 10px;">1</span>
+            <span class="hint" style="bottom: 10px; right: 10px;">0</span>
+        </div>
+    </div>
+    
+    <script src="level8.js"></script>
+</body>
+</html>
